@@ -1,0 +1,61 @@
+<!-- index.html -->
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+	<title>Expense Tracker</title> 
+	<link rel="stylesheet"
+		type="text/css"
+		href="style.css" /> 
+</head> 
+
+<body> 
+	<div class="container"> 
+		<h1>Expense Tracker</h1> 
+		<form id="expense-form"> 
+			<input type="text"
+				id="expense-name"
+				placeholder="Expense Name" required /> 
+			<input type="number"
+				id="expense-amount"
+				placeholder="Amount" required /> 
+			<input type = "date"
+				id = "expense-date"
+				placeholder="Date" required/>
+			<button type="submit"> 
+				Add Expense 
+			</button> 
+		</form> 
+		<div class="expense-table"> 
+			<table> 
+				<thead> 
+					<tr> 
+						<th>Expense Name</th> 
+						<th>Amount</th>
+						<th>Date</th> 
+						<th>Delete</th>
+					</tr> 
+				</thead> 
+				<tbody id="expense-list"></tbody> 
+			</table> 
+			<div class="total-amount"> 
+				<strong>Total:</strong> 
+				$<span id="total-amount">0</span> 	
+			</div> 
+		</div>
+		<div>
+			<label for="start-date">Start Date:</label>
+			<input type="date" id="start-date">
+			<label for="end-date">End Date:</label>
+			<input type="date" id="end-date">
+			<button id="filter-summary">View Expense Report</button>
+		</div>
+		
+        <div id="expense-summary"></div>
+		<canvas id="expenseChart" width="400" height="400"></canvas>
+	</div> 
+	<script src="script.js"></script> 
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body> 	
+</html>
